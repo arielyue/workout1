@@ -10,7 +10,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-print('../code/make-teams-table.R')
+library(readr)
+library(ggplot2)
+library(dplyr)
+```
+
+```{r}
+teams <- read_csv('../data/nba2018-teams.csv')
 ```
 
 ## 5) Ranking of Teams 
@@ -18,7 +24,6 @@ print('../code/make-teams-table.R')
 #### Basic Rankings
 
 ```{r, bar chart teams salary rank}
-library(ggplot2)
 ggplot(data = teams, aes(x = reorder(team, salary), y = salary)) +
     geom_bar(stat = 'identity', fill = 'grey') +
     geom_hline(aes(yintercept = mean(salary), col = 'red', linetype = 'solid', lwd = 1)) +
@@ -45,12 +50,14 @@ ggplot(data = teams, aes(x = reorder(team, efficiency), y = efficiency)) +
   labs(title = "NBA Teams ranked by Total Efficiency", y = "Efficiency", x = "Team" )
 ```
 
-```{r, bar chart teams defense strength rank }
-dat3 <- mutate(dat2, def_strength =  (dat$steals + dat$blocks)/ dat$games) 
+```{r}
+dat3 <- mutate(teams, def_strength =  steals + blocks) 
 teams2 <- dat3 %>%
   group_by(team) %>%
   summarise(experience = sum(experience), salary = sum(salary), points3 = sum(points3), points2 = sum(points2), points1 = sum(points1), points = sum(points), off_rebounds = sum(off_rebounds), def_rebounds = sum(def_rebounds), assists = sum(assists), steals = sum(assists), blocks = sum(blocks), turnovers = sum(turnovers), fouls = sum(fouls), efficiency = sum(efficiency), def_strength = sum(def_strength))
+```
 
+```{r, bar chart teams defense strength rank}
 ggplot(data = teams2, aes(x = reorder(team, def_strength), y = def_strength)) +
     geom_bar(stat = 'identity', fill = 'grey') +
     geom_hline(aes(yintercept = mean(def_strength), col = 'red', linetype = 'solid', lwd = 1)) +
@@ -58,8 +65,8 @@ ggplot(data = teams2, aes(x = reorder(team, def_strength), y = def_strength)) +
   theme_minimal() +
   labs(title = "NBA Teams ranked by Total Defense Strength", y = "Defense Strength", x = "Team" )
 ```
-```
-I created the index "*Defense Strength*", which measures the strength of each team's defense. I calculated this by adding *steals* and *blocks* and dividing by *games* to get the strength of each team's defense per game. This allows you to rank teams based on their defense. 
+
+I created the index "*Defense Strength*", which measures the strength of each team's defense. I calculated this by adding *steals* and *blocks* to get the strength of each team's defense, since steals and blocks are both categories of defense. This allows you to rank teams based on their defense. 
 
 ##Comments and Reflections
 
