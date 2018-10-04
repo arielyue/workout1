@@ -1,8 +1,8 @@
 1. Title of Database: NBA 2018 data
 
 2. Sources: 
-  (a) Main source: 
-  (b) Sample data source of a given team (e.g. GS Warriors): 
+  (a) Main source: (https://www.basketball-reference.com)
+  (b) Sample data source of a given team (e.g. GS Warriors): (https://www.basketball-reference.com/teams/GSW/2018.html)
 
 3. Relevant Information Paragraph:
 

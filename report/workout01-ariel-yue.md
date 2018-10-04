@@ -24,11 +24,8 @@ library(dplyr)
 teams <- read_csv('../data/nba2018-teams.csv')
 ```
 
-    ## Warning: Missing column names filled in: 'X1' [1]
-
     ## Parsed with column specification:
     ## cols(
-    ##   X1 = col_integer(),
     ##   team = col_character(),
     ##   experience = col_integer(),
     ##   salary = col_double(),

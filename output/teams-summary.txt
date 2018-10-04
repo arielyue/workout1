@@ -19,31 +19,31 @@
  Mean   :2263   Mean   :1375   Mean   :8114  
  3rd Qu.:2458   3rd Qu.:1495   3rd Qu.:8611  
  Max.   :2638   Max.   :1623   Max.   :9491  
-  off_rebounds    def_rebounds 
- Min.   :521.0   Min.   :1876  
- 1st Qu.:711.0   1st Qu.:2455  
- Median :780.0   Median :2600  
- Mean   :776.9   Mean   :2552  
- 3rd Qu.:863.0   3rd Qu.:2692  
- Max.   :962.0   Max.   :2869  
-    assists         steals    
- Min.   :1183   Min.   :1183  
- 1st Qu.:1551   1st Qu.:1551  
- Median :1753   Median :1753  
- Mean   :1744   Mean   :1744  
- 3rd Qu.:1882   3rd Qu.:1882  
- Max.   :2486   Max.   :2486  
-     blocks        turnovers     
- Min.   :232.0   Min.   : 674.0  
- 1st Qu.:318.2   1st Qu.: 972.8  
- Median :357.5   Median :1029.5  
- Mean   :363.0   Mean   :1025.0  
- 3rd Qu.:392.5   3rd Qu.:1100.5  
- Max.   :554.0   Max.   :1212.0  
-     fouls        efficiency   
- Min.   :1168   Min.   :131.5  
- 1st Qu.:1444   1st Qu.:144.1  
- Median :1567   Median :148.0  
- Mean   :1519   Mean   :152.3  
- 3rd Qu.:1620   3rd Qu.:160.6  
- Max.   :1887   Max.   :182.1  
+  off_rebounds    def_rebounds     assists    
+ Min.   :521.0   Min.   :1876   Min.   :1183  
+ 1st Qu.:711.0   1st Qu.:2455   1st Qu.:1551  
+ Median :780.0   Median :2600   Median :1753  
+ Mean   :776.9   Mean   :2552   Mean   :1744  
+ 3rd Qu.:863.0   3rd Qu.:2692   3rd Qu.:1882  
+ Max.   :962.0   Max.   :2869   Max.   :2486  
+     steals         blocks     
+ Min.   :1183   Min.   :232.0  
+ 1st Qu.:1551   1st Qu.:318.2  
+ Median :1753   Median :357.5  
+ Mean   :1744   Mean   :363.0  
+ 3rd Qu.:1882   3rd Qu.:392.5  
+ Max.   :2486   Max.   :554.0  
+   turnovers          fouls     
+ Min.   : 674.0   Min.   :1168  
+ 1st Qu.: 972.8   1st Qu.:1444  
+ Median :1029.5   Median :1567  
+ Mean   :1025.0   Mean   :1519  
+ 3rd Qu.:1100.5   3rd Qu.:1620  
+ Max.   :1212.0   Max.   :1887  
+   efficiency   
+ Min.   :131.5  
+ 1st Qu.:144.1  
+ Median :148.0  
+ Mean   :152.3  
+ 3rd Qu.:160.6  
+ Max.   :182.1  

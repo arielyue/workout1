@@ -42,5 +42,5 @@ sink(file = '../output/teams-summary.txt')
 summary(teams)
 sink()
 
-write.csv(teams, file = "../data/nba2018-teams.csv")
+write.csv(teams, file = "../data/nba2018-teams.csv", row.names = FALSE)
 
